@@ -1,0 +1,19 @@
+{% load static %}
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url'account_logout' %}">LogOut</a></li>
+        {% else %}
+        <li><a href="{% url'account_signup' %}">SignUp</a></li>
+    </ul>
+</header>
+</body>
+</html>
