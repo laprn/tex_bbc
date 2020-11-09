@@ -8,13 +8,17 @@
 <body>
 <header>
     <ul>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'diary:diary_list' %}">Diary List</a></li>
+        {% endif %}
         <li><a href="/">Home</a></li>
         {% if user.is_authenticated %}
-        <li><a href="{% url'account_logout' %}">LogOut</a></li>
+        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
         {% else %}
-        <li><a href="{% url'account_signup' %}">SignUp</a></li>
-        {% if user.is_authenticated %}
-        <li><a href="{% diary:diary_list %}"></a></li>
+        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        <li><a href="{% url 'account_login' %}">Log In</a></li>
+        {% endif %}
+
     </ul>
 </header>
 </body>
