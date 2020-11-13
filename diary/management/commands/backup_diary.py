@@ -7,13 +7,14 @@ from django.core.management.base import BaseCommand
 
 from ...models import Diary
 
+
 class Command(BaseCommand):
     help ='Backup Diary data'
 
     def handle(self, *args, **options):
         date = datetime.date.today().strftime('%Y%m%d')
         file_path = settings.BACKUP_PATH + 'diary' + date + '.csv'
-        os.mkdir(settings.BACKUP_PATH, exist_ok = True)
+        os.mkdir(settings.BACKUP_PATH, exist_ok=True)
 
         with open(file_path, 'w') as file:
             writer = csv.writer(file)
