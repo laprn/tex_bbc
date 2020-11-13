@@ -46,8 +46,18 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'pydjax'
 ]
-
+MATHJAX_CONFIG_DATA = {
+    "tex2jax": {
+      "inlineMath":
+    [
+        ['$','$'],
+        ['\\(','\\)']
+    ]
+    }
+}
+MATHJAX_ENABLED=True
 SITE_ID = 1
 
 AUTH_USER_MODEL = 'accounts.CustomUser'

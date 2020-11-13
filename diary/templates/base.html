@@ -1,9 +1,11 @@
 {% load static %}
+{% load mathjax %}
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block title %}{% endblock %}</title>
+    {% mathjax_scripts %}
 </head>
 <body>
 <header>
@@ -24,5 +26,10 @@
 {% block contents %}
 
 {% endblock %}
+<footer>
+    <ul>
+        <li><a href="https://github.com/laprn/tex_bbc">GitHub</a></li>
+    </ul>
+</footer>
 </body>
 </html>

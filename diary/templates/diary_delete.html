@@ -6,6 +6,8 @@
 {% block active_diary_list %}active{% endblock%}
 
 {% block contents %}
+
+{% load mathjax %}
 <div class="container">
     <form method="POST">
         {% csrf_token %}

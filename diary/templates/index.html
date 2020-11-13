@@ -2,12 +2,10 @@
 {% load static %}
 {% block title %}TeXが使える匿名日記{% endblock %}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Hello Django!</h1>
-</body>
-</html>
+{% block contents %}
+<div class="container">
+    <h1><a href="{% url 'diary:index' %}">$ \TeX $で質問掲示板</a></h1>
+    <hr>
+    <p>タイトル通り、$\TeX$が使える質問掲示板です。徐々にアップデートしていきたいです。進捗はこちらから:<a href="https://github.com/laprn/tex_bbc">GitHub</a></p>
+</div>
+{% endblock %}
