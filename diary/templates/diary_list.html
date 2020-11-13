@@ -1,13 +1,15 @@
-{% extends 'base.html %}
+{% extends 'base.html' %}
 {% load static %}
 {% block title %}日記一覧 | Private Dairy {% endblock %}
 {% block active_diary_list %}active{% endblock %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+{% block contents %}
+<div class="container">
+    {% for diary in diary_list %}
+    <a href="{% url 'diary:diary_detail' diary.pk %}"><h2>{{ diary.title }}</h2></a>
+    <p>{{ diary.created_at }}</p>
+    {% empty %}
+    <p>日記がありません。</p>
+    {% endfor %}
+</div>
+{% endblock %}
