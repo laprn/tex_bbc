@@ -45,13 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
 ]
 
 SITE_ID = 1
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
-
-
 
 AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -151,3 +150,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'la.purun@gmail.com'
+EMAIL_HOST_PASSWORD = '3gFRpfgoogle'
+EMAIL_USE_TLS = True

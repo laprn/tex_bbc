@@ -3,8 +3,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Diary
 
+
 class IndexView(generic.TemplateView):
     template_name = 'index.html'
+
 
 class DiaryListView(LoginRequiredMixin, generic.ListView):
     model = Diary
