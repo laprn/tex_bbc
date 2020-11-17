@@ -4,31 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>{% block title %}{% endblock %}</title>
     {% mathjax_scripts %}
 </head>
 <body>
 <header>
-    <ul>
+    <ul class="nav-list">
         {% if user.is_authenticated %}
-        <li><a href="{% url 'diary:diary_list' %}">Diary List</a></li>
+        <li class="nav-list-item"><a href="{% url 'diary:diary_list' %}">Diary List</a></li>
         {% endif %}
-        <li><a href="/">Home</a></li>
+        <li class="nav-list-item"><a href="/">Home</a></li>
         {% if user.is_authenticated %}
-        <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+        <li class="nav-list-item"><a href="{% url 'account_logout' %}">Log Out</a></li>
         {% else %}
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
-        <li><a href="{% url 'account_login' %}">Log In</a></li>
+        <li class="nav-list-item"><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        <li class="nav-list-item"><a href="{% url 'account_login' %}">Log In</a></li>
         {% endif %}
 
     </ul>
 </header>
+<content>
 {% block contents %}
 
 {% endblock %}
+</content>
 <footer>
-    <ul>
-        <li><a href="https://github.com/laprn/tex_bbc">GitHub</a></li>
+    <ul class="nav-list">
+        <li class = "nav-list-item"><a href="https://github.com/laprn/tex_bbc">GitHub</a></li>
     </ul>
 </footer>
 </body>

@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+.container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.nav-list {
+  padding: 10px 0;
+}
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+header, footer{
+    background-color: #B0C4DE;
+    height: 5rem;
+}
+#footer{
+    position: fixed;
+    bottom: 0;
+}

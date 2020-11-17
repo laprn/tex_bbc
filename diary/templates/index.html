@@ -7,5 +7,15 @@
     <h1><a href="{% url 'diary:index' %}">$ \TeX $で質問掲示板</a></h1>
     <hr>
     <p>タイトル通り、$\TeX$が使える質問掲示板です。徐々にアップデートしていきたいです。進捗はこちらから:<a href="https://github.com/laprn/tex_bbc">GitHub</a></p>
+    <table>
+        <tr>
+            <td>初めての方</td>
+            <td><a href="{% url 'account_signup' %}">Sign Up</a></td>
+        </tr>
+        <tr>
+            <td>登録済みの方</td>
+            <td><a href="{% url 'account_login' %}">Log In</a</td>
+        </tr>
+    </table>
 </div>
 {% endblock %}
