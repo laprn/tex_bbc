@@ -7,10 +7,10 @@
 <div class="container">
     {% for diary in diary_list %}
     <a href="{% url 'diary:diary_detail' diary.pk %}"><h2>{{ diary.title }}</h2></a>
-    <p>{{ diary.created_at }}</p>
+    <small>{{ diary.created_at }}</small>
     {% empty %}
     <p>日記がありません。</p>
     {% endfor %}
+    <p><a href="{% url 'diary:diary_create' %}">新規作成</a></p>
 </div>
-<a href="{% url 'diary:diary_create' %}">新規作成</a>
 {% endblock %}

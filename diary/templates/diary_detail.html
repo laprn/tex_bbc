@@ -6,8 +6,8 @@
 
 {% block contents %}
 <div class="container">
-    <p>{{ object.title }}</p>
-    <p>{{ object.updated_at }}</p>
+    <h2>{{ object.title }}</h2>
+    <small>{{ object.updated_at }}</small>
     <hr>
     <p>{{ object.content|linebreaksbr }}</p>
     <a href="{% url 'diary:diary_update' object.pk %}">編集</a>

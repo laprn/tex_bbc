@@ -1,12 +1,17 @@
 body {
     margin: 0;
-    display: flex;
-    flex-flow: column;
-    min-height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 .container{
-    width: 60%;
+    width: 65%;
     margin: 0 auto;
+    height:100%;
+    min-height: 100%;
 }
 
 .nav-list {
@@ -21,6 +26,7 @@ body {
 header, footer{
     background-color: #B0C4DE;
     height: 5rem;
+    display: flex;
 }
 #footer{
     position: fixed;
