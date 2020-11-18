@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Log In{% endblock %}
+
+{% block active_signup %}active{% endblock%}
+{% block contents %}
+<div class="container">
+    <h1>ログイン</h1>
+    <p>アカウントをまだお持ちでなければ、こちらから<a href="{% url 'account_signup' %}">ユーザー登録</a>してください。</p>
+    <table>
+        <form method="post" action="{% url 'account_login' %}">
+        {% csrf_token %}
+            {{ form.as_p }}
+        {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button type="submit">ログイン</button>
+            <p><a href="{% url 'account_reset_password' %}">パスワードを忘れましたか?</a></p>
+        </form>
+    </table>
+</div>
+{% endblock %}
