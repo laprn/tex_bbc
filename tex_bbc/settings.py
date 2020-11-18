@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'pydjax'
+    'pydjax',
+    'ckeditor',
 ]
 MATHJAX_CONFIG_DATA = {
     "tex2jax": {

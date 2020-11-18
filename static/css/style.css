@@ -17,6 +17,9 @@ a:hover {
 .nav-list {
   padding: 10px 0;
 }
+.nav-list a {
+    color:white;
+}
 .nav-list-item {
   list-style: none;
   display: inline-block;
@@ -24,9 +27,10 @@ a:hover {
 }
 
 header, footer{
-    background-color: #B0C4DE;
+    background-color: #343c44;
     height: 5rem;
     display: flex;
+    font-weight: bold;
 }
 #footer{
     position: fixed;
