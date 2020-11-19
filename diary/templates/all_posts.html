@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}All Posts{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <h1>All Posts</h1>
+    <ul>
+    {% for post in object_list %}
+        <li>{{ post.title }} - {{ post.user }}<br/>
+            {{ post.created_at }} </li>
+    {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}

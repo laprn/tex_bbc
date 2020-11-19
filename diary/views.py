@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 
 from .forms import InquiryForm, DiaryCreateForm
 
-from .models import Diary
+from .models import Diary, Comment
 from django.contrib import messages
 
 
@@ -34,6 +34,7 @@ class DiaryListView(LoginRequiredMixin, generic.ListView):
 class DiaryDetailView(LoginRequiredMixin, generic.DetailView):
     model = Diary
     template_name = 'diary_detail.html'
+    context_object_name = 'diaries'
 
 
 class DiaryCreateView(LoginRequiredMixin, generic.CreateView):
@@ -79,3 +80,9 @@ class DiaryDeleteView(LoginRequiredMixin, generic.DeleteView):
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, '日記を削除しました。')
         return super().delete(request, *args, **kwargs)
+
+
+class AllPosts(generic.ListView):
+    model = Diary
+    template_name = 'all_posts.html'
+

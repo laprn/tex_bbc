@@ -15,7 +15,9 @@
         <li class="nav-list-item"><a href="{% url 'diary:diary_list' %}">Diary List</a></li>
         {% endif %}
         <li class="nav-list-item"><a href="/">Home</a></li>
+        <li class="nav-list-item"><a href="{% url 'diary:all_posts' %}">All Posts</a></li>
         {% if user.is_authenticated %}
+        <li class="nav-list-item"><a href="{% url 'diary:diary_create' %}">Add Post</a></li>
         <li class="nav-list-item"><a href="{% url 'account_logout' %}">Log Out</a></li>
         {% else %}
         <li class="nav-list-item"><a href="{% url 'account_signup' %}">Sign Up</a></li>

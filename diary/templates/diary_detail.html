@@ -6,14 +6,26 @@
 
 {% block contents %}
 <div class="container">
-    <h2>{{ object.title }}</h2>
-    <small>{{ object.updated_at }}</small>
+    <h1>{{ object.title }}</h1>
+    <small>
+        By:{{ object.user }} -
+        {{ object.updated_at }}
+        <a href="{% url 'diary:diary_update' object.pk %}">(編集)</a>
+        <a href="{% url 'diary:diary_delete' object.pk %}">(削除)</a>
+    </small>
     <hr>
     <p>{{ object.content|safe }}</p>
-    <button onclick="location.href='{% url 'diary:diary_update' object.pk %}'">編集</button>
-    <button onclick="location.href='{% url 'diary:diary_delete' object.pk %}'">削除</button>
-
-<!--    <a href="{% url 'diary:diary_update' object.pk %}">編集</a>-->
-<!--    <a href="{% url 'diary:diary_delete' object.pk %}">削除</a>-->
+<!--    <button onclick="location.href='{% url 'diary:diary_update' object.pk %}'">編集</button>-->
+<!--    <button onclick="location.href='{% url 'diary:diary_delete' object.pk %}'">削除</button>-->
+    <hr>
+    <h2>コメント</h2>
+    {% if not object.comments.all %}
+    コメントなし
+    {% else %}
+    {% for comment in object.comments.all %}
+    <strong>{{ comment.name }} - {{ comment.date_added }}</strong><br>
+    {{ comment.body|safe }}
+    {% endfor %}
+    {% endif %}
 </div>
 {% endblock %}
