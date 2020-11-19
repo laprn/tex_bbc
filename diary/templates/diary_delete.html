@@ -8,14 +8,20 @@
 {% block contents %}
 
 {% load mathjax %}
-<div class="container">
-    <form method="POST">
-        {% csrf_token %}
-        <p>本当に削除しますか?</p>
-        <button type="submit">削除</button>
-        <button onclick="location.href='{% url 'diary:diary_detail' object.pk %}'">キャンセル</button>
-
-<!--        <a href="{% url 'diary:diary_detail' object.pk %}">キャンセル</a>-->
-    </form>
-</div>
+{% if user.is_authenticated %}
+    {% if user.id == object.user.id %}
+        <div class="container">
+            <form method="POST">
+                {% csrf_token %}
+                <p>本当に削除しますか?</p>
+                <button type="submit">削除</button>
+                <a href="{% url 'diary:diary_detail' object.pk %}">キャンセル</a>
+            </form>
+        </div>
+{% else %}
+    <h1>権限がありません！</h1>
+    {% endif %}
+{% else %}
+<h1>権限がありません！</h1>
+{% endif %}
 {% endblock %}

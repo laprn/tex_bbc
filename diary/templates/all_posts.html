@@ -8,7 +8,7 @@
     <h1>All Posts</h1>
     <ul>
     {% for post in object_list %}
-        <li>{{ post.title }} - {{ post.user }}<br/>
+        <li><a href="{% url 'diary:diary_detail' post.pk %}">{{ post.title }}</a> - {{ post.user }}<br/>
             {{ post.created_at }} </li>
     {% endfor %}
     </ul>
