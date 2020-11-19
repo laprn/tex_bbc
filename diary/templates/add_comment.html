@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Comment on blog post{% endblock %}
+
+{% block active_diary_list %}active{% endblock %}
+
+{% block contents %}
+<div class="container">
+    <h1>Add Comment</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.media}}
+        {{ form.as_p }}
+        <button type="submit">コメントする</button>
+    </form>
+</div>
+{% endblock %}

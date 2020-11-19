@@ -2,6 +2,8 @@ from accounts.models import CustomUser
 from django.db import models
 from ckeditor.fields import RichTextField
 
+from django.contrib.auth.models import User
+
 
 class Diary(models.Model):
     user = models.ForeignKey(CustomUser, verbose_name='User', on_delete=models.PROTECT)
@@ -27,4 +29,9 @@ class Comment(models.Model):
         return '%s - %s' % (self.post.title, self.name)
 
 
+class Profile(models.Model):
+    user = models.OneToOneField(CustomUser, null=True, on_delete=models.CASCADE)
+    bio = models.TextField()
 
+    def __str__(self):
+        return str(self.user)

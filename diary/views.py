@@ -2,10 +2,11 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 
-from .forms import InquiryForm, DiaryCreateForm
+from .forms import InquiryForm, DiaryCreateForm, CommentForm, EditProfileForm
 
 from .models import Diary, Comment
 from django.contrib import messages
+
 
 
 class IndexView(generic.TemplateView):
@@ -31,7 +32,7 @@ class DiaryListView(LoginRequiredMixin, generic.ListView):
         return diaries
 
 
-class DiaryDetailView(LoginRequiredMixin, generic.DetailView):
+class DiaryDetailView(generic.DetailView):
     model = Diary
     template_name = 'diary_detail.html'
     context_object_name = 'diaries'
@@ -75,7 +76,7 @@ class DiaryUpdateView(LoginRequiredMixin, generic.UpdateView):
 class DiaryDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Diary
     template_name = 'diary_delete.html'
-    success_url = reverse_lazy('diary:diary_list')
+    # success_url = reverse_lazy('diary:diary_list')
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, '日記を削除しました。')
@@ -85,4 +86,26 @@ class DiaryDeleteView(LoginRequiredMixin, generic.DeleteView):
 class AllPosts(generic.ListView):
     model = Diary
     template_name = 'all_posts.html'
+
+
+class AddCommentView(generic.CreateView):
+    model = Comment
+    template_name = 'add_comment.html'
+    form_class = CommentForm
+    success_url = reverse_lazy('diary:all_posts')
+    # fields = '__all__'
+
+    def form_valid(self, form):
+        form.instance.post_id = self.kwargs['pk']
+        return super().form_valid(form)
+
+
+class UserEditView(generic.UpdateView):
+    form_class = EditProfileForm
+    template_name = 'edit_profile.html'
+    success_url = reverse_lazy('all_posts')
+
+    def get_object(self):
+        return self.request.user
+
 

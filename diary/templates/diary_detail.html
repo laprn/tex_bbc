@@ -10,22 +10,33 @@
     <small>
         By:{{ object.user }} -
         {{ object.updated_at }}
-        <a href="{% url 'diary:diary_update' object.pk %}">(編集)</a>
-        <a href="{% url 'diary:diary_delete' object.pk %}">(削除)</a>
+        {% if user.is_authenticated %}
+            {% if user.id == diaries.user.id %}
+                <a href="{% url 'diary:diary_update' object.pk %}">(編集)</a>
+                <a href="{% url 'diary:diary_delete' object.pk %}">(削除)</a>
+            {% endif %}
+        {% endif %}
     </small>
     <hr>
     <p>{{ object.content|safe }}</p>
 <!--    <button onclick="location.href='{% url 'diary:diary_update' object.pk %}'">編集</button>-->
 <!--    <button onclick="location.href='{% url 'diary:diary_delete' object.pk %}'">削除</button>-->
     <hr>
+    {{ object.user.profile.bio }}
+    <hr>
     <h2>コメント</h2>
     {% if not object.comments.all %}
-    コメントなし
+    コメントなし<br><br>
+    <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a>
     {% else %}
+    <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a><br><br>
     {% for comment in object.comments.all %}
-    <strong>{{ comment.name }} - {{ comment.date_added }}</strong><br>
+    <strong>{{ comment.name }} - </strong><small>{{ comment.date_added }}</small><br>
     {{ comment.body|safe }}
+    <br>
     {% endfor %}
+    <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a><br><br>
     {% endif %}
+    <br><br>
 </div>
 {% endblock %}
