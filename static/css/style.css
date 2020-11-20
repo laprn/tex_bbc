@@ -36,3 +36,25 @@ header, footer{
     position: fixed;
     bottom: 0;
 }
+
+.sub-menu {
+  display: none;
+}
+
+.sub-menu > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+.sub-menu > ul > li > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.menu-title{
+    color:white;
+}
+.menu:hover .sub-menu{
+    display: inline-block;
+}

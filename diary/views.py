@@ -8,7 +8,6 @@ from .models import Diary, Comment
 from django.contrib import messages
 
 
-
 class IndexView(generic.TemplateView):
     template_name = 'index.html'
 

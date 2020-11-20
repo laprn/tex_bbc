@@ -3,10 +3,11 @@ from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.forms import UserChangeForm
 from django.urls import reverse_lazy
+from .forms import EditProfileForm
 
 
 class UserEditView(generic.CreateView):
-    form_class = UserChangeForm
+    form_class = EditProfileForm
     template_name = 'edit_profile.html'
     success_url = reverse_lazy('all_posts')
 
