@@ -26,16 +26,28 @@
     <hr>
     <h2>コメント</h2>
     {% if not object.comments.all %}
-    コメントなし<br><br>
+    <p>コメントなし</p>
+    {% if user.is_authenticated %}
     <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a>
     {% else %}
+    <p>コメントを書くには<a href="{% url 'account_login' %}">ログイン</a>してください。</p>
+    {% endif %}
+    {% else %}
+    {% if user.is_authenticated %}
     <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a><br><br>
+    {% else %}
+    <p>コメントを書くには<a href="{% url 'account_login' %}">ログイン</a>してください。</p>
+    {% endif %}
     {% for comment in object.comments.all %}
     <strong>{{ comment.name }} - </strong><small>{{ comment.date_added }}</small><br>
     {{ comment.body|safe }}
     <br>
     {% endfor %}
+    {% if user.is_authenticated %}
     <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a><br><br>
+    {% else %}
+    <p>コメントを書くには<a href="{% url 'account_login' %}">ログイン</a>してください。</p>
+    {% endif %}
     {% endif %}
     <br><br>
 </div>

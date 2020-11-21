@@ -8,7 +8,7 @@ a:hover {
   text-decoration: underline;
 }
 .container{
-    width: 65%;
+    width: 60%;
     margin: 0 auto;
     height:100%;
     min-height: 100%;
@@ -27,14 +27,9 @@ a:hover {
 }
 
 header, footer{
-    background-color: #343c44;
     height: 5rem;
     display: flex;
     font-weight: bold;
-}
-#footer{
-    position: fixed;
-    bottom: 0;
 }
 
 .sub-menu {
