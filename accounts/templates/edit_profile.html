@@ -11,6 +11,7 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
+        <p>Joined Date:{{ user.date_joined }}</p>
         <button>Update Profile</button>
     </form>
 </div>

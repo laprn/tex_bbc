@@ -22,7 +22,7 @@ class Diary(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey(Diary, related_name='comments', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
-    body = RichTextField()
+    body = RichTextField(extra_plugins=['mathjax'],)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

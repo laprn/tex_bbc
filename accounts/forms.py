@@ -10,5 +10,5 @@ class EditProfileForm(UserChangeForm):
 
     class Meta:
         model = User
-        fields = ('email', 'username', 'date_joined')
+        fields = ('email', 'username')
 

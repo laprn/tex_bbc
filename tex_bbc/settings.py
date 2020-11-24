@@ -24,8 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'rf++p!k_=jf8mnny!hm6jvpqn72#lruq%ls8x45^7%&(mg_@!k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+# DEBUG = False
+
 DEBUG = True
 
+
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 ALLOWED_HOSTS = []
 
 
@@ -49,16 +54,26 @@ INSTALLED_APPS = [
     'pydjax',
     'ckeditor',
 ]
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['table'],
+        ]
+    }
+}
+
 MATHJAX_CONFIG_DATA = {
     "tex2jax": {
       "inlineMath":
     [
-        ['$','$'],
-        ['\\(','\\)']
+        ['$', '$'],
+        ['\\(', '\\)']
     ]
     }
 }
-MATHJAX_ENABLED=True
+MATHJAX_ENABLED = True
 SITE_ID = 1
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
@@ -165,6 +180,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'la.purun@gmail.com'
