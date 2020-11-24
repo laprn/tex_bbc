@@ -14,16 +14,20 @@ class ShowProfilePageView(DetailView):
     template_name = 'user_profile.html'
 
     def get_context_data(self, *args, **kwargs):
-        users = Proifle.objects.all()
+        users = Profile.objects.all()
         context = super(ShowProfilePageView, self).get_context_data(*args, **kwargs)
         page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
 
         context['page_user'] = page_user
         return context
 
-class UserEditView(generic.CreateView):
+
+class UserEditView(generic.UpdateView):
     model = CustomUser
     form_class = EditProfileForm
     template_name = 'edit_profile.html'
-    success_url = reverse_lazy('all_posts')
+    success_url = reverse_lazy('diary:all_posts')
+
+    def get_object(self):
+        return self.request.user
 

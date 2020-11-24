@@ -21,8 +21,12 @@
     <p>{{ object.content|safe }}
         <a href="{% url 'accounts:show_profile_page' object.user.id %} ">プロフィール</a>
     </p>
-<!--    <button onclick="location.href='{% url 'diary:diary_update' object.pk %}'">編集</button>-->
-<!--    <button onclick="location.href='{% url 'diary:diary_delete' object.pk %}'">削除</button>-->
+    <form action="{% url 'diary:like_post' object.pk %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" name="post_id" value="{{ object.pk }}" class="btn btn-primary btn-sm">
+            <i class="far fa-thumbs-up"></i>
+        </button> - {{ total_likes }} Likes
+    </form>
     <hr>
     {{ object.user.profile.bio }}
     <hr>
