@@ -16,16 +16,16 @@ import os
 # Build paths inside the project like this: _DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = False
+#DEBUG = True
+DEBUG = False 
 
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
-
-STATIC_ROOT = '/usr/share/nginx/html/static'
-MEDIA_ROOT = '/usr/share/nginx/media'
+STATIC_ROOT = '/usr/share/nginx/html/static/'
+MEDIA_ROOT = '/usr/share/nginx/media/'
 
 AWS_SES_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
 AWS_SES_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
 EMAIL_BACKEND = 'django_ses.SESBackend'
+DEFAULT_FROM_EMAIL = SERVER_EMAIL = 'info@kjbn.dev'
 
 LOGGING = {
     'version': 1,
@@ -76,9 +76,9 @@ LOGGING = {
 SECRET_KEY = 'rf++p!k_=jf8mnny!hm6jvpqn72#lruq%ls8x45^7%&(mg_@!k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
 
 
 # Application definition
@@ -102,7 +102,12 @@ INSTALLED_APPS = [
     'ckeditor',
 
     'django_ses',
+    'sri'
 ]
+
+MIDDLEWARE = (
+    'csp.middleware.CSPMiddleware',
+        )
 MATHJAX_CONFIG_DATA = {
     "tex2jax": {
       "inlineMath":
@@ -147,7 +152,7 @@ ROOT_URLCONF = 'tex_bbc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'diary/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -170,8 +175,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'tex_bbc',
-        'USER': 'postgres',
-        'PASSWORD': '3gFRpfpostgres',
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': '',
         'PORT': '',
     }
@@ -219,11 +224,20 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'la.purun@gmail.com'
-EMAIL_HOST_PASSWORD = '3gFRpfgoogle'
+MAIL_HOST_USER = 'info@kjbn.dev'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PW')
 EMAIL_USE_TLS = True
 
 BACKUP_PATH = 'backup/'
 NUM_SAVED_BACKUP = 30
+
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_PRELOAD = True
+SECURE_BROWSER_XSS_FILTER = True

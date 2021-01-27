@@ -26,10 +26,10 @@ class DiaryCreateForm(forms.ModelForm):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('name', 'body')
+        fields = ('body',)
 
         widgets = {
-            'name': forms.TextInput(),
+            #'name': forms.TextInput(),
             'body': forms.Textarea(),
 
         }

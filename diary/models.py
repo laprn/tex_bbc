@@ -11,9 +11,13 @@ class Diary(models.Model):
     content = RichTextField(blank=True, null=True)
     created_at = models.DateTimeField(verbose_name='作成日時', auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name='更新日時', auto_now_add=True)
+    likes = models.ManyToManyField(CustomUser, related_name='blog_posts')
 
     class Meta:
         verbose_name_plural = 'Diary'
+
+    def total_likes(self):
+        return self.likes.count()
 
     def __str__(self):
         return self.title + '|' + str(self.user)
