@@ -5,9 +5,14 @@ from django.contrib.auth.forms import UserChangeForm
 from django.urls import reverse_lazy
 from .forms import EditProfileForm
 
+from .models import CustomUser
 
-class UserEditView(generic.CreateView):
+class UserEditView(generic.UpdateView):
+    model = CustomUser
     form_class = EditProfileForm
     template_name = 'edit_profile.html'
-    success_url = reverse_lazy('all_posts')
+    success_url = reverse_lazy('diary:all_posts')
+
+    def get_object(self):
+        return self.request.user
 

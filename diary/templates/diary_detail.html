@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}日記詳細 | Private Diary{% endblock %}
+{% block title %}投稿詳細 | Private Diary{% endblock %}
 {% block active_diary_list %}active{% endblock %}
 
 {% block contents %}
@@ -19,24 +19,51 @@
     </small>
     <hr>
     <p>{{ object.content|safe }}</p>
-<!--    <button onclick="location.href='{% url 'diary:diary_update' object.pk %}'">編集</button>-->
-<!--    <button onclick="location.href='{% url 'diary:diary_delete' object.pk %}'">削除</button>-->
     <hr>
-    {{ object.user.profile.bio }}
+<form action="{% url 'diary:like_post' object.pk %}" method="POST">
+        {% csrf_token %}
+            {% if user.is_authenticated%}
+                {% if liked %}
+                <button type="submit" name="post_id" value="{{ object.pk }}" class="btn btn-primary btn-sm">
+                    <i class="far fa-thumbs-up"></i>
+                </button>
+                {% else %}
+                <button type="submit" name="post_id" value="{{ object.pk }}" class="btn btn-outline-primary btn-sm">
+                    <i class="far fa-thumbs-up"></i>
+                </button>
+                {% endif %}
+            {% else %}
+            <small>評価するには<a href="{% url 'account_login' %}">ログインしてください</a></small>
+            {% endif %}
+        - {{ total_likes }} Likes
+    </form>
+    {{ object.user.profile.bio | safe }}
     <hr>
     <h2>コメント</h2>
     {% if not object.comments.all %}
-    コメントなし<br><br>
+    <p>コメントなし</p>
+    {% if user.is_authenticated %}
     <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a>
     {% else %}
+    <p>コメントを書くには<a href="{% url 'account_login' %}">ログイン</a>してください。</p>
+    {% endif %}
+    {% else %}
+    {% if user.is_authenticated %}
     <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a><br><br>
+    {% else %}
+    <p>コメントを書くには<a href="{% url 'account_login' %}">ログイン</a>してください。</p>
+    {% endif %}
     {% for comment in object.comments.all %}
     <strong>{{ comment.name }} - </strong><small>{{ comment.date_added }}</small><br>
     {{ comment.body|safe }}
     <br>
     {% endfor %}
+    {% if user.is_authenticated %}
     <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a><br><br>
+    {% else %}
+    <p>コメントを書くには<a href="{% url 'account_login' %}">ログイン</a>してください。</p>
     {% endif %}
-    <br><br>
+    {% endif %}
+    <br>
 </div>
 {% endblock %}

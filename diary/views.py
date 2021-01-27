@@ -1,11 +1,25 @@
 from django.views import generic
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
 from .forms import InquiryForm, DiaryCreateForm, CommentForm, EditProfileForm
 
 from .models import Diary, Comment
 from django.contrib import messages
+from django.http import HttpResponseRedirect
+
+def LikeView(request, pk):
+    post = get_object_or_404(Diary, id=request.POST.get('post_id'))
+    liked = False
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)
+        liked = False
+    else:
+        post.likes.add(request.user)
+        liked = True
+
+    return HttpResponseRedirect(reverse('diary:diary_detail', args=[str(pk)]))
 
 
 class IndexView(generic.TemplateView):
@@ -36,6 +50,17 @@ class DiaryDetailView(generic.DetailView):
     template_name = 'diary_detail.html'
     context_object_name = 'diaries'
 
+    def get_context_data(self, *args, **kwargs):
+        context = super(DiaryDetailView, self).get_context_data(*args, **kwargs)
+        stuff = get_object_or_404(Diary, id=self.kwargs['pk'])
+        total_likes = stuff.total_likes()
+        liked = False
+        if stuff.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        context['total_likes'] = total_likes
+        context['liked'] = liked
+        return context
 
 class DiaryCreateView(LoginRequiredMixin, generic.CreateView):
     model = Diary
@@ -91,13 +116,13 @@ class AddCommentView(generic.CreateView):
     model = Comment
     template_name = 'add_comment.html'
     form_class = CommentForm
-    success_url = reverse_lazy('diary:all_posts')
-    # fields = '__all__'
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
+        form.instance.name = self.request.user
         return super().form_valid(form)
-
+    def get_success_url(self):
+        return reverse_lazy('diary:diary_detail', kwargs={'pk': self.kwargs['pk']})
 
 class UserEditView(generic.UpdateView):
     form_class = EditProfileForm

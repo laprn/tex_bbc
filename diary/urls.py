@@ -15,4 +15,5 @@ urlpatterns = [
     # path('edit_profile/', views.UserEditView.as_view(), name='edit_profile'),
     # path('password/', auth_views.PasswordChangeView.as_view()),
 
+    path('like/<int:pk>', views.LikeView, name='like_post'),
 ]
