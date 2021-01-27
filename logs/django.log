@@ -250,3 +250,4 @@
 2021-01-27 22:51:12,766	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
 2021-01-27 22:51:12,766	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /Telerik.Web.UI.WebResource.axd
 2021-01-28 00:40:11,306	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
+2021-01-28 01:32:26,567	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /favicon.ico
