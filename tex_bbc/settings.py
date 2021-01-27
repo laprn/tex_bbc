@@ -16,6 +16,7 @@ import os
 # Build paths inside the project like this: _DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+<<<<<<< HEAD
 #DEBUG = True
 DEBUG = False 
 
@@ -68,6 +69,8 @@ LOGGING = {
 
 
 
+=======
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -76,9 +79,20 @@ LOGGING = {
 SECRET_KEY = 'rf++p!k_=jf8mnny!hm6jvpqn72#lruq%ls8x45^7%&(mg_@!k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+<<<<<<< HEAD
 #DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
+=======
+
+# DEBUG = False
+
+DEBUG = True
+
+
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = []
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 
 
 # Application definition
@@ -100,6 +114,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'pydjax',
     'ckeditor',
+<<<<<<< HEAD
 
     'django_ses',
     'sri'
@@ -108,16 +123,29 @@ INSTALLED_APPS = [
 MIDDLEWARE = (
     'csp.middleware.CSPMiddleware',
         )
+=======
+]
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['table'],
+        ]
+    }
+}
+
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 MATHJAX_CONFIG_DATA = {
     "tex2jax": {
       "inlineMath":
     [
-        ['$','$'],
-        ['\\(','\\)']
+        ['$', '$'],
+        ['\\(', '\\)']
     ]
     }
 }
-MATHJAX_ENABLED=True
+MATHJAX_ENABLED = True
 SITE_ID = 1
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
@@ -225,7 +253,11 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+<<<<<<< HEAD
 EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
+=======
+EMAIL_HOST = 'smtp.gmail.com'
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 EMAIL_PORT = 587
 MAIL_HOST_USER = 'info@kjbn.dev'
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PW')

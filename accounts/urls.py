@@ -7,4 +7,5 @@ app_name = 'accounts'
 urlpatterns = [
     path('password/', auth_views.PasswordChangeView.as_view(template_name='account/password_reset.html')),
     path('edit_profile/', views.UserEditView.as_view(), name='edit_profile'),
+    path('<int:pk>/profile/', views.ShowProfilePageView.as_view(), name='show_profile_page'),
 ]

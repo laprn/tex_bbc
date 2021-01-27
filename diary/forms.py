@@ -3,6 +3,8 @@ from .models import Diary
 from .models import Comment
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.models import User
+from accounts.models import CustomUser
+from ckeditor.fields import RichTextField
 
 
 class InquiryForm(forms.Form):
@@ -29,9 +31,14 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
         widgets = {
+<<<<<<< HEAD
             #'name': forms.TextInput(),
             'body': forms.Textarea(),
 
+=======
+            # 'name': forms.TextInput(),
+            'body': forms.TextInput(),
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
         }
 
 

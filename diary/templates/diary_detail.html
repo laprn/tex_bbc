@@ -18,7 +18,19 @@
         {% endif %}
     </small>
     <hr>
+<<<<<<< HEAD
     <p>{{ object.content|safe }}</p>
+=======
+    <p>{{ object.content|safe }}
+        <a href="{% url 'accounts:show_profile_page' object.user.id %} ">プロフィール</a>
+    </p>
+    <form action="{% url 'diary:like_post' object.pk %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" name="post_id" value="{{ object.pk }}" class="btn btn-primary btn-sm">
+            <i class="far fa-thumbs-up"></i>
+        </button> - {{ total_likes }} Likes
+    </form>
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
     <hr>
 <form action="{% url 'diary:like_post' object.pk %}" method="POST">
         {% csrf_token %}
@@ -62,6 +74,10 @@
     <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a><br><br>
     {% else %}
     <p>コメントを書くには<a href="{% url 'account_login' %}">ログイン</a>してください。</p>
+<<<<<<< HEAD
+=======
+    {% endif %}
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
     {% endif %}
     {% endif %}
     <br>

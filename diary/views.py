@@ -9,6 +9,7 @@ from .models import Diary, Comment
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 
+<<<<<<< HEAD
 def LikeView(request, pk):
     post = get_object_or_404(Diary, id=request.POST.get('post_id'))
     liked = False
@@ -19,6 +20,12 @@ def LikeView(request, pk):
         post.likes.add(request.user)
         liked = True
 
+=======
+
+def LikeView(request, pk):
+    post = get_object_or_404(Diary, id=request.POST.get('post_id'))
+    post.likes.add(request.user)
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
     return HttpResponseRedirect(reverse('diary:diary_detail', args=[str(pk)]))
 
 
@@ -54,6 +61,7 @@ class DiaryDetailView(generic.DetailView):
         context = super(DiaryDetailView, self).get_context_data(*args, **kwargs)
         stuff = get_object_or_404(Diary, id=self.kwargs['pk'])
         total_likes = stuff.total_likes()
+<<<<<<< HEAD
         liked = False
         if stuff.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -61,6 +69,11 @@ class DiaryDetailView(generic.DetailView):
         context['total_likes'] = total_likes
         context['liked'] = liked
         return context
+=======
+        context['total_likes'] = total_likes
+        return context
+
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 
 class DiaryCreateView(LoginRequiredMixin, generic.CreateView):
     model = Diary
@@ -116,13 +129,25 @@ class AddCommentView(generic.CreateView):
     model = Comment
     template_name = 'add_comment.html'
     form_class = CommentForm
+<<<<<<< HEAD
+=======
+    # success_url = reverse_lazy('diary:all_posts')
+    # fields = '__all__'
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         form.instance.name = self.request.user
         return super().form_valid(form)
+<<<<<<< HEAD
     def get_success_url(self):
         return reverse_lazy('diary:diary_detail', kwargs={'pk': self.kwargs['pk']})
+=======
+
+    def get_success_url(self):
+        return reverse_lazy('diary:diary_detail', kwargs={'pk': self.kwargs['pk']})
+
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 
 class UserEditView(generic.UpdateView):
     form_class = EditProfileForm
@@ -131,5 +156,6 @@ class UserEditView(generic.UpdateView):
 
     def get_object(self):
         return self.request.user
+
 
 

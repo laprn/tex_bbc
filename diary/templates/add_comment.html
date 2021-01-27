@@ -10,7 +10,11 @@
     <h1>Add Comment</h1>
     <form method="POST">
         {% csrf_token %}
+<<<<<<< HEAD
 	<p>投稿者:{{ user.username }}</p>
+=======
+        <p>投稿者:{{ user.username }}</p>
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
         {{ form.media}}
         {{ form.as_p }}
         <button type="submit">コメントする</button>
