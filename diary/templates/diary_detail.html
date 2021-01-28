@@ -23,9 +23,20 @@
     </p>
     <form action="{% url 'diary:like_post' object.pk %}" method="POST">
         {% csrf_token %}
-        <button type="submit" name="post_id" value="{{ object.pk }}" class="btn btn-primary btn-sm">
-            <i class="far fa-thumbs-up"></i>
-        </button> - {{ total_likes }} Likes
+            {% if user.is_authenticated%}
+                {% if liked %}
+                <button type="submit" name="post_id" value="{{ object.pk }}" class="btn btn-primary btn-sm">
+                    <i class="far fa-thumbs-up"></i>
+                </button>
+                {% else %}
+                <button type="submit" name="post_id" value="{{ object.pk }}" class="btn btn-outline-primary btn-sm">
+                    <i class="far fa-thumbs-up"></i>
+                </button>
+                {% endif %}
+            {% else %}
+            <small>評価するには<a href="{% url 'account_login' %}">ログインしてください</a></small>
+            {% endif %}
+        - {{ total_likes }} Likes
     </form>
     <hr>
     {{ object.user.profile.bio }}
