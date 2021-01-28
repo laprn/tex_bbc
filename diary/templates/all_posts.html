@@ -6,6 +6,7 @@
 {% block contents %}
 <div class="container">
     <h1>All Posts</h1>
+    <hr>
     <ul>
     {% for post in object_list %}
         <li><a href="{% url 'diary:diary_detail' post.pk %}">{{ post.title }}</a> - {{ post.user }}<br/>
