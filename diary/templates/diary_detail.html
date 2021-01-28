@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}日記詳細 | Private Diary{% endblock %}
+{% block title %}投稿詳細 | Private Diary{% endblock %}
 {% block active_diary_list %}active{% endblock %}
 
 {% block contents %}
@@ -18,6 +18,9 @@
         {% endif %}
     </small>
     <hr>
+<<<<<<< HEAD
+    <p>{{ object.content|safe }}</p>
+=======
     <p>{{ object.content|safe }}
         <a href="{% url 'accounts:show_profile_page' object.user.id %} ">プロフィール</a>
     </p>
@@ -38,8 +41,26 @@
             {% endif %}
         - {{ total_likes }} Likes
     </form>
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
     <hr>
-    {{ object.user.profile.bio }}
+<form action="{% url 'diary:like_post' object.pk %}" method="POST">
+        {% csrf_token %}
+            {% if user.is_authenticated%}
+                {% if liked %}
+                <button type="submit" name="post_id" value="{{ object.pk }}" class="btn btn-primary btn-sm">
+                    <i class="far fa-thumbs-up"></i>
+                </button>
+                {% else %}
+                <button type="submit" name="post_id" value="{{ object.pk }}" class="btn btn-outline-primary btn-sm">
+                    <i class="far fa-thumbs-up"></i>
+                </button>
+                {% endif %}
+            {% else %}
+            <small>評価するには<a href="{% url 'account_login' %}">ログインしてください</a></small>
+            {% endif %}
+        - {{ total_likes }} Likes
+    </form>
+    {{ object.user.profile.bio | safe }}
     <hr>
     <h2>コメント</h2>
     {% if not object.comments.all %}
@@ -64,8 +85,12 @@
     <a href="{% url 'diary:add_comment' object.pk %}">コメントを書く</a><br><br>
     {% else %}
     <p>コメントを書くには<a href="{% url 'account_login' %}">ログイン</a>してください。</p>
+<<<<<<< HEAD
+=======
+    {% endif %}
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
     {% endif %}
     {% endif %}
-    <br><br>
+    <br>
 </div>
 {% endblock %}

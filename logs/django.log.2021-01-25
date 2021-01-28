@@ -1,0 +1,141 @@
+2021-01-25 00:41:00,926	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 00:41:00,927	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /.env
+2021-01-25 00:41:01,509	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 00:41:01,510	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 01:21:05,758	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 01:21:05,759	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /.env
+2021-01-25 01:21:11,413	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 01:21:11,413	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 01:21:22,764	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 01:21:22,764	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2021-01-25 02:42:51,143	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:42:51,144	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /.env
+2021-01-25 02:42:51,989	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:42:51,989	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 02:48:29,376	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:48:29,376	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /solr/admin/info/system
+2021-01-25 02:48:29,395	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:48:29,395	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /index.php
+2021-01-25 02:48:30,251	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:48:30,252	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2021-01-25 02:48:30,268	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:48:30,269	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /api/jsonws/invoke
+2021-01-25 02:48:31,129	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:48:31,129	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /wp-content/plugins/wp-file-manager/readme.txt
+2021-01-25 02:48:31,139	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:48:31,139	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2021-01-25 02:48:32,011	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:48:32,012	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /console/
+2021-01-25 02:48:32,013	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:48:32,013	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 02:48:32,869	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:48:32,870	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 02:48:32,901	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 02:48:32,901	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /Autodiscover/Autodiscover.xml
+2021-01-25 04:43:38,723	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 04:43:38,724	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 05:29:09,621	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: 'api.binance.com'. You may need to add 'api.binance.com' to ALLOWED_HOSTS.
+2021-01-25 05:29:09,621	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /api/v1/time
+2021-01-25 07:16:03,005	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: 'api.binance.com'. You may need to add 'api.binance.com' to ALLOWED_HOSTS.
+2021-01-25 07:16:03,005	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /api/v1/time
+2021-01-25 07:54:45,824	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 07:54:45,824	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 07:54:46,328	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 07:54:46,328	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 08:37:55,505	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: 'api.binance.com'. You may need to add 'api.binance.com' to ALLOWED_HOSTS.
+2021-01-25 08:37:55,505	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /api/v1/time
+2021-01-25 08:44:45,385	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 08:44:45,386	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /.env
+2021-01-25 08:44:45,984	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 08:44:45,985	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 09:45:03,413	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 09:45:03,413	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 09:45:03,980	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 09:45:03,980	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 09:50:17,333	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 09:50:17,333	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /login
+2021-01-25 10:06:49,316	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:06:49,316	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /.env
+2021-01-25 10:06:49,697	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:06:49,697	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 10:07:26,590	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:07:26,591	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 10:08:47,646	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:08:47,647	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /.env
+2021-01-25 10:08:48,054	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:08:48,054	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 10:20:14,206	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:20:14,206	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /.env
+2021-01-25 10:20:14,806	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:20:14,806	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 10:40:38,328	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:40:38,329	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2021-01-25 10:40:40,044	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:40:40,044	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /api/jsonws/invoke
+2021-01-25 10:40:40,812	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:40:40,812	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /wp-content/plugins/wp-file-manager/readme.txt
+2021-01-25 10:40:42,161	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:40:42,162	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /Autodiscover/Autodiscover.xml
+2021-01-25 10:40:45,181	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:40:45,182	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /console/
+2021-01-25 10:40:45,843	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:40:45,843	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2021-01-25 10:40:46,582	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:40:46,582	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /index.php
+2021-01-25 10:40:47,359	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:40:47,359	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /mifs/.;/services/LogService
+2021-01-25 10:40:48,866	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:40:48,867	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 10:55:01,587	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 10:55:01,587	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 11:17:00,568	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 11:17:00,569	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 11:33:28,926	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /robots.txt
+2021-01-25 12:00:19,853	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 12:00:19,854	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /owa/auth/logon.aspx
+2021-01-25 12:58:01,981	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 12:58:01,981	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 13:15:31,224	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 13:15:31,224	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 13:59:27,552	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: 'api.binance.com'. You may need to add 'api.binance.com' to ALLOWED_HOSTS.
+2021-01-25 13:59:27,552	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /api/v1/time
+2021-01-25 14:20:18,874	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89:443'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 14:20:18,875	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 14:58:00,369	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 14:58:00,369	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 14:59:57,931	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /wp-login.php
+2021-01-25 14:59:58,315	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /wp-login.php
+2021-01-25 15:13:03,088	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 15:13:03,088	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 15:44:44,592	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: 'api.binance.com'. You may need to add 'api.binance.com' to ALLOWED_HOSTS.
+2021-01-25 15:44:44,592	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /api/v1/time
+2021-01-25 18:18:10,192	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: 'api.binance.com'. You may need to add 'api.binance.com' to ALLOWED_HOSTS.
+2021-01-25 18:18:10,192	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /api/v1/time
+2021-01-25 18:50:01,138	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /wp-login.php
+2021-01-25 18:50:07,952	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Not Found: /wp-login.php
+2021-01-25 20:04:25,720	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: 'api.binance.com'. You may need to add 'api.binance.com' to ALLOWED_HOSTS.
+2021-01-25 20:04:25,720	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /api/v1/time
+2021-01-25 20:19:27,918	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:19:27,918	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /api/jsonws/invoke
+2021-01-25 20:19:28,593	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:19:28,594	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2021-01-25 20:19:28,766	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:19:28,767	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /solr/admin/info/system
+2021-01-25 20:19:29,472	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:19:29,472	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /index.php
+2021-01-25 20:19:29,653	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:19:29,654	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 20:19:30,648	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:19:30,648	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 20:19:30,858	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:19:30,858	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+2021-01-25 20:19:31,519	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:19:31,519	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /console/
+2021-01-25 20:19:32,404	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:19:32,405	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /wp-content/plugins/wp-file-manager/readme.txt
+2021-01-25 20:19:33,804	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:19:33,804	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /Autodiscover/Autodiscover.xml
+2021-01-25 20:48:52,708	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 20:48:52,708	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /
+2021-01-25 23:12:12,837	[ERROR]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/core/handlers/exception.py(Line:90)	Invalid HTTP_HOST header: '3.114.140.89'. You may need to add '3.114.140.89' to ALLOWED_HOSTS.
+2021-01-25 23:12:12,837	[WARNING]	/home/app_admin/venv_tex_bbc/lib64/python3.7/site-packages/django/utils/log.py(Line:230)	Bad Request: /actuator/health

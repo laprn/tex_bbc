@@ -31,8 +31,14 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
         widgets = {
+<<<<<<< HEAD
+            #'name': forms.TextInput(),
+            'body': forms.Textarea(),
+
+=======
             # 'name': forms.TextInput(),
             'body': forms.TextInput(),
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
         }
 
 

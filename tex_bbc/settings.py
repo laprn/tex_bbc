@@ -16,6 +16,61 @@ import os
 # Build paths inside the project like this: _DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+<<<<<<< HEAD
+#DEBUG = True
+DEBUG = False 
+
+STATIC_ROOT = '/usr/share/nginx/html/static/'
+MEDIA_ROOT = '/usr/share/nginx/media/'
+
+AWS_SES_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
+AWS_SES_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
+EMAIL_BACKEND = 'django_ses.SESBackend'
+DEFAULT_FROM_EMAIL = SERVER_EMAIL = 'info@kjbn.dev'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'loggers':{
+        'django':{
+            'handlers':['file'],
+            'level':'INFO',
+        },
+        'diary':{
+            'handlers':['file'],
+            'level':'INFO',
+        },
+    },
+
+    'handlers': {
+        'file':{
+            'level':'INFO',
+            'class':'logging.handlers.TimedRotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/django.log'),
+            'formatter':'prod',
+            'when':'D',
+            'interval':1,
+            'backupCount':7,
+        },
+    },
+
+    'formatters':{
+        'prod':{
+            'format': '\t'.join([
+                '%(asctime)s',
+                '[%(levelname)s]',
+                '%(pathname)s(Line:%(lineno)d)',
+                '%(message)s'
+            ])
+        },
+    }
+}
+
+
+
+=======
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -24,6 +79,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'rf++p!k_=jf8mnny!hm6jvpqn72#lruq%ls8x45^7%&(mg_@!k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+<<<<<<< HEAD
+#DEBUG = True
+
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
+=======
 
 # DEBUG = False
 
@@ -32,6 +92,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 ALLOWED_HOSTS = []
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 
 
 # Application definition
@@ -53,6 +114,16 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'pydjax',
     'ckeditor',
+<<<<<<< HEAD
+
+    'django_ses',
+    'sri'
+]
+
+MIDDLEWARE = (
+    'csp.middleware.CSPMiddleware',
+        )
+=======
 ]
 
 CKEDITOR_CONFIGS = {
@@ -64,6 +135,7 @@ CKEDITOR_CONFIGS = {
     }
 }
 
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 MATHJAX_CONFIG_DATA = {
     "tex2jax": {
       "inlineMath":
@@ -108,7 +180,7 @@ ROOT_URLCONF = 'tex_bbc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'diary/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,8 +203,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'tex_bbc',
-        'USER': 'postgres',
-        'PASSWORD': '3gFRpfpostgres',
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': '',
         'PORT': '',
     }
@@ -181,11 +253,23 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+<<<<<<< HEAD
+EMAIL_HOST = 'email-smtp.us-east-1.amazonaws.com'
+=======
 EMAIL_HOST = 'smtp.gmail.com'
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'la.purun@gmail.com'
-EMAIL_HOST_PASSWORD = '3gFRpfgoogle'
+MAIL_HOST_USER = 'info@kjbn.dev'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PW')
 EMAIL_USE_TLS = True
 
 BACKUP_PATH = 'backup/'
 NUM_SAVED_BACKUP = 30
+
+SECURE_HSTS_SECONDS = 31536000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_PRELOAD = True
+SECURE_BROWSER_XSS_FILTER = True

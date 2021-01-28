@@ -8,7 +8,10 @@ from .models import CustomUser
 from django.views.generic import DetailView
 from diary.models import Profile
 
+from .models import CustomUser
 
+<<<<<<< HEAD
+=======
 class ShowProfilePageView(DetailView):
     model = Profile
     template_name = 'user_profile.html'
@@ -21,6 +24,7 @@ class ShowProfilePageView(DetailView):
         return context
 
 
+>>>>>>> 5883fa8d860596d552c4124634bb80a3730bab56
 class UserEditView(generic.UpdateView):
     model = CustomUser
     form_class = EditProfileForm
